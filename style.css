@@ -1,36 +1,58 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+:root{
+
+    --font-primary: 'Poppins', sans-serif;
+    --font-secunday: 'Poppins', sans-serif;
+}
+
 body{
     text-align: center;
     background-color: #212121;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--font-primary);
 }
 
 form{
-    max-width: 400px;
+    max-width: 300px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     background-color: #f5f5f5;
     border-radius: 10px;
+    text-align: center;
 }
 
 input{
-    display: block;
     font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
+    margin-bottom: 20px;
+    color: #5e5e5e;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
     
 }
 
 button{
-    display: block;
-    width: 50%;
-    padding: 10px;
-    background-color: #ff6f69;
-    color: #fff;
-    margin: 0 15px 20px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background: rgb(0,140,255);
+}
+
+button:hover{
+    box-shadow: 0 0 5px rgb(0,140,255),
+    0 0 25px rgb(0,140,255),
+    0 0 50px rgb(0,140,255),
+    0 0 100px rgb(0,140,255);
 }
 
 
@@ -53,8 +75,60 @@ ul {
 
 li{
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .botoes button {
-    margin: 0 15px 20px;
+    margin: 20px 15px 0px;
+    padding: 15px 20px;
+    border: none;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 4px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    background: rgb(0,140,255);
+    box-shadow: 0 0 25px rgb(0,140,255);
+}
+
+.botoes button:hover{
+    box-shadow: 0 0 5px rgb(0,140,255),
+    0 0 25px rgb(0,140,255),
+    0 0 50px rgb(0,140,255),
+    0 0 100px #008cff;
+}
+
+#contato-lista{
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+#comentario{
+    width: 95%;
+    resize: none;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+}
+
+label{
+    display: block;
+    margin-bottom: 4px;
+}
+
+input::placeholder{
+    color: rgb(124, 124, 124);
+}
+
+.teste{
+    text-align: left;
+    width: 95%;
+    color: #008cff;
+    font-weight: 600;
 }
