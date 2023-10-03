@@ -1,12 +1,14 @@
 // Definindo a classe contatos
 class Contatos {
-    constructor(nome, email, telefone){
+    constructor(nome, email, telefone, comentario){
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
+        this.comentario = comentario;
     }
 }
 
+// Definindo Funções
 class Gerenciando {
     constructor(){
         this.contatos = []
@@ -23,7 +25,7 @@ class Gerenciando {
 
         for(const contato of this.contatos){
             const li = document.createElement('li');
-            li.innerHTML = `${contato.nome} - ${contato.email} - ${contato.telefone}`;
+            li.innerHTML = `${contato.nome} - ${contato.email} - ${contato.telefone} - ${contato.comentario}`;
             listaContatos.appendChild(li)
         }
     }
@@ -35,6 +37,7 @@ const contatoForm = document.getElementById('contato-form');
 const nomeF = document.getElementById('nome');
 const emailF = document.getElementById('email');
 const telefoneF = document.getElementById('telefone');
+const comentarioF = document.getElementById('comentario');
 const mostrarContatos = document.getElementById('mostrar-contatos');
 const ocultarContatos = document.getElementById('ocultar-contatos')
 const listaContato = document.getElementById('contato-lista')
@@ -45,15 +48,17 @@ contatoForm.addEventListener('submit' , (event) =>{
 
     const nome =  nomeF.value;
     const email =  emailF.value;
-    const telefone =  telefoneF.value;  
+    const telefone =  telefoneF.value;
+    const comentario =  comentarioF.value;  
     
-    const contato = new Contatos(nome, email, telefone);
+    const contato = new Contatos(nome, email, telefone, comentario);
 
     gerenciadorContatos.adicionarContato(contato);
 
     nomeF.value = ''
     emailF.value = ''
     telefoneF.value = ''
+    comentarioF.value = ''
 });
 
 mostrarContatos.addEventListener('click', () => {
